@@ -38,7 +38,7 @@ jobs:
       - name: Build with Hugo
         run: |
           docker run \
-            --volume ${{ github.workspace }}:/src \
+            --volume $PWD:/src \
             docker.io/hugomods/hugo:ci \
             build \
             --minify \
