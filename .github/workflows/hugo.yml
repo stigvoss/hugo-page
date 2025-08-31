@@ -40,6 +40,7 @@ jobs:
           docker run \
             --volume ${{ github.workspace }}:/src \
             docker.io/hugomods/hugo:ci \
+            build \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
